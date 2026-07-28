@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fikadeselassie | Portfolio</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+
+    <!-- FontAwesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 transition-colors duration-300 font-sans overflow-x-hidden">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full h-16 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 z-50 px-4 sm:px-6 flex items-center justify-between transition-colors duration-300">
+        <h1 class="text-xl sm:text-2xl font-bold text-sky-500 dark:text-sky-400">Fikade.</h1>
+        
+        <!-- Desktop Menu -->
+        <ul class="hidden lg:flex space-x-6 text-sm font-medium">
+            <li><a href="#home" class="hover:text-sky-500 dark:hover:text-sky-400 transition">Home</a></li>
+            <li><a href="#about" class="hover:text-sky-500 dark:hover:text-sky-400 transition">About</a></li>
+            <li><a href="#skills" class="hover:text-sky-500 dark:hover:text-sky-400 transition">Skills</a></li>
+            <li><a href="#graphics-courses" class="hover:text-sky-500 dark:hover:text-sky-400 transition">Graphics Courses</a></li>
+            <li><a href="#graphics-projects" class="hover:text-sky-500 dark:hover:text-sky-400 transition">Brand Identity Projects</a></li>
+            <li><a href="#contact" class="hover:text-sky-500 dark:hover:text-sky-400 transition">Contact</a></li>
+        </ul>
+        
+        <div class="flex items-center space-x-3">
+            <!-- Theme Switcher Button -->
+            <button id="theme-toggle" class="p-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-sky-500 dark:hover:text-sky-400 transition focus:outline-none">
+                <i id="theme-icon" class="fa-solid fa-sun"></i>
+            </button>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-sky-500 dark:hover:text-sky-400 transition focus:outline-none">
+                <i id="menu-icon" class="fa-solid fa-bars text-lg"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden fixed top-16 left-0 w-full bg-white/95 dark:bg-slate-900/95 border-b border-slate-200 dark:border-slate-800 backdrop-blur-lg z-40 px-6 py-6 transition-all duration-300">
+        <ul class="flex flex-col space-y-4 text-base font-medium">
+            <li><a href="#home" class="mobile-link block hover:text-sky-500 dark:hover:text-sky-400 transition">Home</a></li>
+            <li><a href="#about" class="mobile-link block hover:text-sky-500 dark:hover:text-sky-400 transition">About</a></li>
+            <li><a href="#skills" class="mobile-link block hover:text-sky-500 dark:hover:text-sky-400 transition">Skills</a></li>
+            <li><a href="#graphics-courses" class="mobile-link block hover:text-sky-500 dark:hover:text-sky-400 transition">Graphics Courses</a></li>
+            <li><a href="#graphics-projects" class="mobile-link block hover:text-sky-500 dark:hover:text-sky-400 transition">Brand Identity Projects</a></li>
+            <li><a href="#contact" class="mobile-link block hover:text-sky-500 dark:hover:text-sky-400 transition">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-24 pb-12 text-center px-4">
+        <div class="max-w-2xl mx-auto">
+            <img src="img.jpg" alt="Fikadeselassie" class="w-32 h-32 sm:w-44 sm:h-44 rounded-full mx-auto border-4 border-sky-400 object-cover shadow-xl mb-6">
+            <h1 class="text-3xl sm:text-5xl font-extrabold mb-3">Hi, I’m <span class="text-sky-500 dark:text-sky-400">Fikadeselassie</span> 👋</h1>
+            <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-400 mb-8">Graphic Designer & Brand Identity Specialist</p>
+            <div class="flex justify-center gap-4 flex-col sm:flex-row w-full sm:w-auto px-6 sm:px-0">
+                <a href="#graphics-projects" class="w-full sm:w-auto px-6 py-3 bg-sky-500 hover:bg-sky-600 text-white font-semibold rounded-full shadow-lg transition transform hover:-translate-y-0.5">View Brand Projects</a>
+                <a href="#" download class="w-full sm:w-auto px-6 py-3 border-2 border-sky-500 dark:border-sky-400 text-sky-500 dark:text-sky-400 hover:bg-sky-500 hover:text-white dark:hover:bg-sky-400 dark:hover:text-slate-900 font-semibold rounded-full transition">📄 Download CV</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 sm:py-20 bg-slate-100/70 dark:bg-slate-800/40 border-y border-slate-200 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-4 relative inline-block after:content-[''] after:block after:w-12 after:h-1 after:bg-sky-500 dark:after:bg-sky-400 after:mx-auto after:mt-2 after:rounded">About Me</h2>
+            <p class="text-slate-700 dark:text-slate-300 text-base sm:text-lg leading-relaxed mt-6">
+                I’m a dedicated graphic designer specializing in full brand identity design and creative media production.
+            </p>
+            <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed mt-4">
+                I help businesses build strong visual identities through logo design, brand guidelines, stationery, print collateral, and digital promotional graphics.
+            </p>
+        </div>
+    </section>
+
+    <!-- Technical Development Skills Section -->
+    <section id="skills" class="py-16 sm:py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl sm:text-3xl font-bold text-center mb-10 sm:mb-12 relative block after:content-[''] after:block after:w-12 after:h-1 after:bg-sky-500 dark:after:bg-sky-400 after:mx-auto after:mt-2 after:rounded">Development Skills</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto">
+                <!-- HTML5 / CSS3 -->
+                <div class="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-slate-200 dark:border-slate-700/50 shadow-md dark:shadow-none hover:border-sky-500 transition">
+                    <div class="flex justify-between items-center mb-2">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-brands fa-html5 text-2xl text-orange-500"></i>
+                            <h3 class="font-bold text-sm sm:text-base">HTML5 / CSS3</h3>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-sky-500 dark:text-sky-400">90%</span>
+                    </div>
+                    <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2.5 overflow-hidden">
+                        <div class="skill-bar bg-sky-500 dark:bg-sky-400 h-2.5 rounded-full transition-all duration-1000 ease-out w-0" data-width="90%"></div>
+                    </div>
+                </div>
+
+                <!-- PHP -->
+                <div class="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-slate-200 dark:border-slate-700/50 shadow-md dark:shadow-none hover:border-sky-500 transition">
+                    <div class="flex justify-between items-center mb-2">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-brands fa-php text-2xl text-indigo-500 dark:text-indigo-400"></i>
+                            <h3 class="font-bold text-sm sm:text-base">PHP</h3>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-sky-500 dark:text-sky-400">80%</span>
+                    </div>
+                    <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2.5 overflow-hidden">
+                        <div class="skill-bar bg-sky-500 dark:bg-sky-400 h-2.5 rounded-full transition-all duration-1000 ease-out w-0" data-width="80%"></div>
+                    </div>
+                </div>
+
+                <!-- SQL / Database -->
+                <div class="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-slate-200 dark:border-slate-700/50 shadow-md dark:shadow-none hover:border-sky-500 transition">
+                    <div class="flex justify-between items-center mb-2">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-database text-2xl text-teal-500 dark:text-teal-400"></i>
+                            <h3 class="font-bold text-sm sm:text-base">SQL / Database</h3>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-sky-500 dark:text-sky-400">85%</span>
+                    </div>
+                    <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2.5 overflow-hidden">
+                        <div class="skill-bar bg-sky-500 dark:bg-sky-400 h-2.5 rounded-full transition-all duration-1000 ease-out w-0" data-width="85%"></div>
+                    </div>
+                </div>
+
+                <!-- WordPress -->
+                <div class="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-slate-200 dark:border-slate-700/50 shadow-md dark:shadow-none hover:border-sky-500 transition">
+                    <div class="flex justify-between items-center mb-2">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-brands fa-wordpress text-2xl text-sky-600 dark:text-sky-400"></i>
+                            <h3 class="font-bold text-sm sm:text-base">WordPress</h3>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-sky-500 dark:text-sky-400">85%</span>
+                    </div>
+                    <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2.5 overflow-hidden">
+                        <div class="skill-bar bg-sky-500 dark:bg-sky-400 h-2.5 rounded-full transition-all duration-1000 ease-out w-0" data-width="85%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Graphics Courses Section -->
+    <section id="graphics-courses" class="py-16 sm:py-20 bg-slate-100/70 dark:bg-slate-800/20 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl sm:text-3xl font-bold text-center mb-4 relative block after:content-[''] after:block after:w-12 after:h-1 after:bg-sky-500 dark:after:bg-sky-400 after:mx-auto after:mt-2 after:rounded">Graphics & Design Courses</h2>
+            <p class="text-center text-slate-600 dark:text-slate-400 text-sm sm:text-base mb-10 sm:mb-12 max-w-xl mx-auto">Professional graphic design, brand identity, and video editing expertise.</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Photoshop -->
+                <div class="bg-white dark:bg-slate-800 p-5 sm:p-6 rounded-2xl border border-slate-200 dark:border-slate-700/50 hover:border-sky-500 transition shadow-md dark:shadow-lg">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span class="w-10 h-10 sm:w-12 sm:h-12 bg-sky-600 font-black text-white flex items-center justify-center rounded-xl text-base sm:text-lg shadow">Ps</span>
+                        <div>
+                            <h3 class="font-bold text-base sm:text-lg">Adobe Photoshop</h3>
+                            <p class="text-xs text-sky-500 dark:text-sky-400 font-medium">Image Editing & Composition</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">Photo manipulation, raster graphics, color grading, retouches, and digital banner design.</p>
+                    <div class="flex justify-between text-xs font-semibold mb-1">
+                        <span class="text-slate-500 dark:text-slate-400">Proficiency</span>
+                        <span class="text-sky-500 dark:text-sky-400">92%</span>
+                    </div>
+                    <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2 overflow-hidden">
+                        <div class="skill-bar bg-sky-500 dark:bg-sky-400 h-2 rounded-full transition-all duration-1000 ease-out w-0" data-width="92%"></div>
+                    </div>
+                </div>
+
+                <!-- Illustrator -->
+                <div class="bg-white dark:bg-slate-800 p-5 sm:p-6 rounded-2xl border border-slate-200 dark:border-slate-700/50 hover:border-sky-500 transition shadow-md dark:shadow-lg">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span class="w-10 h-10 sm:w-12 sm:h-12 bg-amber-600 font-black text-white flex items-center justify-center rounded-xl text-base sm:text-lg shadow">Ai</span>
+                        <div>
+                            <h3 class="font-bold text-base sm:text-lg">Adobe Illustrator</h3>
+                            <p class="text-xs text-amber-600 dark:text-amber-400 font-medium">Vector Graphics & Logos</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">Scalable vector artwork, custom logo creation, typography, icons, and illustration design.</p>
+                    <div class="flex justify-between text-xs font-semibold mb-1">
+                        <span class="text-slate-500 dark:text-slate-400">Proficiency</span>
+                        <span class="text-amber-600 dark:text-amber-400">88%</span>
+                    </div>
+                    <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2 overflow-hidden">
+                        <div class="skill-bar bg-amber-500 dark:bg-amber-400 h-2 rounded-full transition-all duration-1000 ease-out w-0" data-width="88%"></div>
+                    </div>
+                </div>
+
+                <!-- Brand Identity -->
+                <div class="bg-white dark:bg-slate-800 p-5 sm:p-6 rounded-2xl border border-slate-200 dark:border-slate-700/50 hover:border-sky-500 transition shadow-md dark:shadow-lg">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span class="w-10 h-10 sm:w-12 sm:h-12 bg-sky-500 font-black text-white flex items-center justify-center rounded-xl text-base sm:text-lg shadow"><i class="fa-solid fa-palette"></i></span>
+                        <div>
+                            <h3 class="font-bold text-base sm:text-lg text-sky-500 dark:text-sky-400">Brand Identity</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-300 font-medium">Corporate Branding</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">Brand strategy, color schemes, brand guidelines, stationery, business cards, and packaging.</p>
+                    <div class="flex justify-between text-xs font-semibold mb-1">
+                        <span class="text-slate-500 dark:text-slate-400">Proficiency</span>
+                        <span class="text-sky-500 dark:text-sky-400">90%</span>
+                    </div>
+                    <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2 overflow-hidden">
+                        <div class="skill-bar bg-sky-500 dark:bg-sky-400 h-2 rounded-full transition-all duration-1000 ease-out w-0" data-width="90%"></div>
+                    </div>
+                </div>
+
+                <!-- InDesign -->
+                <div class="bg-white dark:bg-slate-800 p-5 sm:p-6 rounded-2xl border border-slate-200 dark:border-slate-700/50 hover:border-sky-500 transition shadow-md dark:shadow-lg">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span class="w-10 h-10 sm:w-12 sm:h-12 bg-pink-600 font-black text-white flex items-center justify-center rounded-xl text-base sm:text-lg shadow">Id</span>
+                        <div>
+                            <h3 class="font-bold text-base sm:text-lg">Adobe InDesign</h3>
+                            <p class="text-xs text-pink-600 dark:text-pink-400 font-medium">Editorial & Print Layout</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">Multi-page document design, magazine layouts, brochures, e-books, and print production.</p>
+                    <div class="flex justify-between text-xs font-semibold mb-1">
+                        <span class="text-slate-500 dark:text-slate-400">Proficiency</span>
+                        <span class="text-pink-600 dark:text-pink-400">82%</span>
+                    </div>
+                    <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2 overflow-hidden">
+                        <div class="skill-bar bg-pink-500 dark:bg-pink-400 h-2 rounded-full transition-all duration-1000 ease-out w-0" data-width="82%"></div>
+                    </div>
+                </div>
+
+                <!-- Premiere Pro -->
+                <div class="bg-white dark:bg-slate-800 p-5 sm:p-6 rounded-2xl border border-slate-200 dark:border-slate-700/50 hover:border-sky-500 transition shadow-md dark:shadow-lg">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span class="w-10 h-10 sm:w-12 sm:h-12 bg-purple-600 font-black text-white flex items-center justify-center rounded-xl text-base sm:text-lg shadow">Pr</span>
+                        <div>
+                            <h3 class="font-bold text-base sm:text-lg">Adobe Premiere Pro</h3>
+                            <p class="text-xs text-purple-600 dark:text-purple-400 font-medium">Video Editing</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">Timeline video editing, audio sync, color correction, transitions, and promo video production.</p>
+                    <div class="flex justify-between text-xs font-semibold mb-1">
+                        <span class="text-slate-500 dark:text-slate-400">Proficiency</span>
+                        <span class="text-purple-600 dark:text-purple-400">85%</span>
+                    </div>
+                    <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2 overflow-hidden">
+                        <div class="skill-bar bg-purple-500 dark:bg-purple-400 h-2 rounded-full transition-all duration-1000 ease-out w-0" data-width="85%"></div>
+                    </div>
+                </div>
+
+                <!-- After Effects -->
+                <div class="bg-white dark:bg-slate-800 p-5 sm:p-6 rounded-2xl border border-slate-200 dark:border-slate-700/50 hover:border-sky-500 transition shadow-md dark:shadow-lg">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span class="w-10 h-10 sm:w-12 sm:h-12 bg-indigo-600 font-black text-white flex items-center justify-center rounded-xl text-base sm:text-lg shadow">Ae</span>
+                        <div>
+                            <h3 class="font-bold text-base sm:text-lg">Adobe After Effects</h3>
+                            <p class="text-xs text-indigo-600 dark:text-indigo-400 font-medium">Motion Graphics & VFX</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">Motion graphics animations, lower thirds, title openers, visual effects, and animated logos.</p>
+                    <div class="flex justify-between text-xs font-semibold mb-1">
+                        <span class="text-slate-500 dark:text-slate-400">Proficiency</span>
+                        <span class="text-indigo-600 dark:text-indigo-400">80%</span>
+                    </div>
+                    <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2 overflow-hidden">
+                        <div class="skill-bar bg-indigo-500 dark:bg-indigo-400 h-2 rounded-full transition-all duration-1000 ease-out w-0" data-width="80%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Brand Identity Projects Showcase (2 Complete Projects) -->
+    <section id="graphics-projects" class="py-16 sm:py-20 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl sm:text-3xl font-bold text-center mb-4 relative block after:content-[''] after:block after:w-12 after:h-1 after:bg-sky-500 dark:after:bg-sky-400 after:mx-auto after:mt-2 after:rounded">Full Brand Identity Projects</h2>
+            <p class="text-center text-slate-600 dark:text-slate-400 text-sm sm:text-base mb-12 max-w-xl mx-auto">Explore two complete corporate branding showcase projects crafted from concept to print mockup.</p>
+
+            <div class="space-y-16">
+                <!-- BRAND IDENTITY 1 -->
+                <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700/60 shadow-xl">
+                    <div class="flex flex-col lg:flex-row items-center gap-8 mb-8">
+                        <div class="w-full lg:w-1/2">
+                            <span class="text-xs font-bold text-sky-500 uppercase tracking-widest bg-sky-500/10 px-3 py-1 rounded-full">Brand Identity #1</span>
+                            <h3 class="text-2xl sm:text-3xl font-extrabold mt-3 mb-3">Bite House</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                                A comprehensive visual brand identity designed for a premium brand. The project includes logo concept design, custom brand patterns, mockups, and complete brand guidelines.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs bg-slate-100 dark:bg-slate-700/80 px-3 py-1 rounded-lg font-medium">Logo & Iconography</span>
+                                <span class="text-xs bg-slate-100 dark:bg-slate-700/80 px-3 py-1 rounded-lg font-medium">Color Palette & Typography</span>
+                                <span class="text-xs bg-slate-100 dark:bg-slate-700/80 px-3 py-1 rounded-lg font-medium">Letterhead & Business Cards</span>
+                                <span class="text-xs bg-slate-100 dark:bg-slate-700/80 px-3 py-1 rounded-lg font-medium">Loyal coustomer</span>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-1/2 h-64 sm:h-80 bg-slate-200 dark:bg-slate-700 rounded-2xl overflow-hidden">
+                            <img src="brand.jpg" alt="Brand 1 Identity" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+
+  <!-- Gallery Grid for Brand 1 -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="aspect-4/3 rounded-xl overflow-hidden bg-slate-200 dark:bg-slate-700">
+                            <img src="back business.jpg" alt="Logo Variants" class="w-full h-full object-cover object-center hover:scale-105 transition duration-300 cursor-pointer">
+                        </div>
+                        <div class="aspect-4/3 rounded-xl overflow-hidden bg-slate-200 dark:bg-slate-700">
+                            <img src="photo_2026-07-27_11-22-54.jpg" alt="Stationery Mockup" class="w-full h-full object-cover object-center hover:scale-105 transition duration-300 cursor-pointer">
+                        </div>
+                        <div class="aspect-4/3 rounded-xl overflow-hidden bg-slate-200 dark:bg-slate-700">
+                            <img src="loya-Recovered copy.jpg" alt="Packaging Design" class="w-full h-full object-cover object-center hover:scale-105 transition duration-300 cursor-pointer">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BRAND IDENTITY 2 -->
+                <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700/60 shadow-xl">
+                    <div class="flex flex-col lg:flex-row items-center gap-8 mb-8">
+                        <div class="w-full lg:w-1/2">
+                            <span class="text-xs font-bold text-amber-500 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full">Brand Identity #2</span>
+                            <h3 class="text-2xl sm:text-3xl font-extrabold mt-3 mb-3">Manoha</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                                A comprehensive visual brand identity designed for a premium brand. The project includes logo concept design, custom brand patterns, mockups, and complete brand guidelines.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs bg-slate-100 dark:bg-slate-700/80 px-3 py-1 rounded-lg font-medium">Logo & Iconography</span>
+                                <span class="text-xs bg-slate-100 dark:bg-slate-700/80 px-3 py-1 rounded-lg font-medium">Color Palette & Typography</span>
+                                <span class="text-xs bg-slate-100 dark:bg-slate-700/80 px-3 py-1 rounded-lg font-medium">Letterhead & Business Cards</span>
+                                <span class="text-xs bg-slate-100 dark:bg-slate-700/80 px-3 py-1 rounded-lg font-medium">Loyal Customer</span>
+                            </div>
+                        </div>
+                       <div class="w-full lg:w-1/2 flex justify-center items-center">
+    <div class="w-56 h-56 sm:w-72 sm:h-72 rounded-full overflow-hidden bg-slate-200 dark:bg-slate-700 border-4 border-sky-400/30 shadow-xl">
+        <img src="ma logo.jpg" alt="Brand 2 Identity" class="w-full h-full object-cover object-center hover:scale-105 transition duration-300">
+    </div>
+</div>
+                    </div>
+
+                    <!-- Gallery Grid for Brand 2 -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="aspect-4/3 rounded-xl overflow-hidden bg-slate-200 dark:bg-slate-700">
+                            <img src="ma ba bu.jpg" alt="Logo Concept" class="w-full h-full object-cover object-center hover:scale-105 transition duration-300 cursor-pointer">
+                        </div>
+                        <div class="aspect-4/3 rounded-xl overflow-hidden bg-slate-200 dark:bg-slate-700">
+                            <img src="ma bu.jpg" alt="Tags & Packaging" class="w-full h-full object-cover object-center hover:scale-105 transition duration-300 cursor-pointer">
+                        </div>
+                        <div class="aspect-4/3 rounded-xl overflow-hidden bg-slate-200 dark:bg-slate-700">
+                            <img src="flayer.jpg" alt="Social Media Posters" class="w-full h-full object-cover object-center hover:scale-105 transition duration-300 cursor-pointer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 sm:py-20 bg-slate-100/70 dark:bg-slate-800/20 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-10 relative block after:content-[''] after:block after:w-12 after:h-1 after:bg-sky-500 dark:after:bg-sky-400 after:mx-auto after:mt-2 after:rounded">Contact Me</h2>
+            
+            <form id="contact-form" class="space-y-4 mb-10">
+                <input type="text" placeholder="Name" class="w-full p-3.5 sm:p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-white text-sm sm:text-base focus:outline-none focus:border-sky-500 dark:focus:border-sky-400 transition" required>
+                <input type="email" placeholder="Email" class="w-full p-3.5 sm:p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-white text-sm sm:text-base focus:outline-none focus:border-sky-500 dark:focus:border-sky-400 transition" required>
+                <textarea placeholder="Message" rows="5" class="w-full p-3.5 sm:p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-white text-sm sm:text-base focus:outline-none focus:border-sky-500 dark:focus:border-sky-400 transition" required></textarea>
+                <button type="submit" class="w-full py-3.5 sm:py-4 bg-sky-500 hover:bg-sky-600 font-bold rounded-xl text-white transition shadow-lg text-sm sm:text-base">Send Message</button>
+            </form>
+
+            <div class="text-center space-y-2 text-slate-700 dark:text-slate-300 text-sm sm:text-base">
+                <p>✉️ <strong>Email:</strong> selasefikade@gmail.com</p>
+                <p>📞 <strong>Phone:</strong> +2519-68-20-30-48</p>
+                <p>🗺️ <strong>Address:</strong> Rwanda Street, Addis Ababa, Ethiopia</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-6 text-center text-slate-500 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 text-xs sm:text-sm">
+        <p>&copy; 2026 Fikadeselassie. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript Code -->
+    <script>
+        // Working Dark / Light Theme Toggle Functionality
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const htmlElement = document.documentElement;
+
+        themeToggleBtn.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            
+            if (htmlElement.classList.contains('dark')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // Contact Form Submission
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for reaching out! Your message has been sent successfully.');
+            contactForm.reset();
+        });
+
+        // Progress Bar Percentage Animation on Scroll
+        const observerOptions = {
+            threshold: 0.2
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const skillBars = entry.target.querySelectorAll('.skill-bar');
+                    skillBars.forEach(bar => {
+                        const targetWidth = bar.getAttribute('data-width');
+                        bar.style.width = targetWidth;
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const skillsSection = document.getElementById('skills');
+        const graphicsSection = document.getElementById('graphics-courses');
+        if (skillsSection) observer.observe(skillsSection);
+        if (graphicsSection) observer.observe(graphicsSection);
+    </script>
+</body>
+</html>
